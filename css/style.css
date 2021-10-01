@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -26,16 +26,16 @@ body main {
   height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main::before {
   content: '';
-  background-image: url('/assets/mobile/image-host.jpg');
+  background-image: url("/assets/mobile/image-host.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -55,7 +55,7 @@ body main::before {
 
 @media only screen and (min-width: 1024px) {
   body main::after {
-    content: url('/assets/desktop/bg-pattern-dots.svg');
+    content: url("/assets/desktop/bg-pattern-dots.svg");
     position: absolute;
     margin-top: 588px;
     margin-left: 1250px;
@@ -64,19 +64,18 @@ body main::before {
 
 @media only screen and (min-width: 768px) {
   body main {
-    background-image: url('/assets/tablet/image-host.jpg'),
-      url('/assets/desktop/bg-pattern-dots.svg');
+    background-image: url("/assets/tablet/image-host.jpg"), url("/assets/desktop/bg-pattern-dots.svg");
     background-position: top right, 30px 920px;
     background-repeat: no-repeat;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   body main {
-    background-image: url('/assets/desktop/image-host.jpg');
+    background-image: url("/assets/desktop/image-host.jpg");
     margin-top: 130px;
     margin-bottom: 130px;
     margin-left: -39px;
@@ -110,8 +109,8 @@ body main .logo {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 635px;
     height: 510px;
     margin-top: 0px;
@@ -217,8 +216,8 @@ body main .content .bcg .images {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 33px 30px 38px 30px;
   width: 315px;
   opacity: 0.5;
