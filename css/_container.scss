@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,258 +7,109 @@
 
 body {
   background-color: $backgroundColor;
-  font-family: "Chivo", sans-serif;
+  font-family: 'Chivo', sans-serif;
   height: 100vh;
-}
-
-main::before {
-  content: "";
-  background-image: url("/assets/mobile/image-host.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.1;
-  z-index: -1;
-}
-main {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  .logo {
-    margin: 62px 120.15px 57px 120px;
-  }
-  h1 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 38px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $h1Color;
-    span {
-      color: $white;
-    }
-  }
-  p {
-    margin-top: 16px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-    color: $pColor;
-    margin-left: 24px;
-    margin-right: 24px;
-    opacity: 0.9;
-  }
-  .images {
-    display: flex;
-    justify-content: space-between;
-    margin: 33px 30px 38px 30px;
-    width: 315px;
-    opacity: 0.5;
-    .spotify {
-      width: 56px;
-      height: 17px;
-    }
-    .apple {
-      width: 45px;
-      height: 17px;
-    }
-    .google {
-      width: 73px;
-      height: 11px;
-    }
-    .pocket {
-      width: 77px;
-      height: 15px;
-    }
-  }
-  form {
-    #error {
-      font-style: normal;
-      font-size: 12px;
-      line-height: 14px;
-      margin-left: 107px;
-      color: #fb3e3e;
-      font-weight: 700;
-      margin-top: -8px;
-    }
-    input {
-      background: #2c344b;
-      border-radius: 28px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 28px;
-      color: #ffffff;
-      mix-blend-mode: normal;
-      border: none;
-      height: 46px;
-      width: 327px;
-      margin: 0px 24px 16px 24px;
-    }
-    input[type="text"]::placeholder {
-      color: $placeholderColor;
-      opacity: 0.8;
-    }
-    input[type="text"] {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 28px;
-      color: $white;
-      mix-blend-mode: normal;
-      padding-left: 32px;
-    }
-    input[type="submit"] {
-      background-color: $inputSubmitColor;
-      cursor: pointer;
-      color: #121725;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 28px;
-    }
-    input[type="submit"]:hover {
-      background-color: $hover;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main::before {
-    opacity: 0;
-  }
-  main {
-    background-image: url("/assets/tablet/image-host.jpg"),
-      url("/assets/desktop/bg-pattern-dots.svg");
-    background-position: top right, 30px 920px;
-    background-repeat: no-repeat;
-    align-items: start;
-    .logo {
-      margin-top: 50px;
-      margin-bottom: 152px;
-      margin-left: 39px;
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      max-width: 635px;
-      height: 510px;
-      margin-top: 0px;
-      background-color: $backgroundColor;
-      margin-left: 39px;
-      h1 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-        line-height: 56px;
-        text-transform: uppercase;
-        color: $h1Color;
-        text-align: start;
-        margin-top: 93px;
-      }
-      p {
-        text-align: start;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 28px;
-        color: $pColor;
-        margin-left: 0;
-        margin-top: 31px;
-        width: 445px;
-        margin-bottom: 0px;
-        opacity: 0.8;
-      }
-      .images {
-        max-width: 536px;
-        margin-left: 0;
-        margin-top: 160px;
-        opacity: 0.5;
-        .spotify {
-          width: 96px;
-          height: 29px;
-          margin-right: 40px;
-        }
-        .apple {
-          width: 78px;
-          height: 29px;
-          margin-right: 41px;
-        }
-        .google {
-          width: 125px;
-          height: 18px;
-          margin-right: 27px;
-        }
-        .pocket {
-          width: 129px;
-          height: 26px;
-        }
-      }
-      form {
-        margin-left: -23px;
-        position: absolute;
-        top: 618px;
-        #error {
-          font-style: normal;
-          font-size: 12px;
-          line-height: 14px;
-          margin-left: 56px;
-          color: #fb3e3e;
-          font-weight: 700;
-          margin-top: -8px;
-        }
-        input[type="text"] {
-          height: 56px;
-          width: 427px;
-          font-weight: bold;
-          opacity: 0.8;
-        }
-        input[type="submit"] {
-          position: absolute;
-          height: 48px;
-          width: 162px;
-          top: 5px;
-          left: 260px;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  main::after {
-    content: url("/assets/desktop/bg-pattern-dots.svg");
-    position: absolute;
-    margin-top: 588px;
-    margin-left: 1250px;
-  }
-  body {
+  @media only screen and (min-width: 1024px) {
     width: 1440px;
     height: 800px;
-    main {
-      background-image: url("/assets/desktop/image-host.jpg");
+  }
+
+  main {
+    &::before {
+      content: '';
+      background-image: url('/assets/mobile/image-host.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+      @media only screen and (min-width: 768px) {
+        opacity: 0;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      &::after {
+        content: url('/assets/desktop/bg-pattern-dots.svg');
+        position: absolute;
+        margin-top: 588px;
+        margin-left: 1250px;
+      }
+    }
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (min-width: 768px) {
+      background-image: url('/assets/tablet/image-host.jpg'),
+        url('/assets/desktop/bg-pattern-dots.svg');
+      background-position: top right, 30px 920px;
+      background-repeat: no-repeat;
+      align-items: start;
+    }
+    @media only screen and(min-width:1024px) {
+      background-image: url('/assets/desktop/image-host.jpg');
       margin-top: 130px;
       margin-bottom: 130px;
       margin-left: -39px;
-      .logo {
+    }
+
+    .logo {
+      margin: 62px 120.15px 57px 120px;
+      @media only screen and (min-width: 768px) {
+        margin-top: 50px;
+        margin-bottom: 152px;
+        margin-left: 39px;
+      }
+      @media only screen and(min-width:1024px) {
         margin-top: -28px;
         margin-left: 0px;
         padding-left: 165px;
       }
-      .content {
+    }
+    .content {
+      @media only screen and(min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        max-width: 635px;
+        height: 510px;
+        margin-top: 0px;
+        background-color: $backgroundColor;
+        margin-left: 39px;
+      }
+      @media only screen and(min-width:1024px) {
         position: absolute;
         margin-left: 165px;
         margin-top: 131px;
-        .bcg {
+      }
+      .bcg {
+        @media only screen and(min-width:1024px) {
           background-color: #121725;
           width: 760px;
-          h1 {
+        }
+        h1 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 26px;
+          line-height: 38px;
+          text-align: center;
+          text-transform: uppercase;
+          color: $h1Color;
+          @media only screen and(min-width:768px) {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 56px;
+            text-transform: uppercase;
+            color: $h1Color;
+            text-align: start;
+            margin-top: 93px;
+          }
+          @media only screen and(min-width:1024px) {
             margin-top: 88px;
             margin-bottom: 24px;
             font-weight: normal;
@@ -268,14 +119,166 @@ main {
             width: 665px;
             height: 124px;
           }
-          p {
+          span {
+            color: $white;
+          }
+        }
+        p {
+          margin-top: 16px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 25px;
+          text-align: center;
+          color: $pColor;
+          margin-left: 24px;
+          margin-right: 24px;
+          opacity: 0.9;
+          @media only screen and(min-width:768px) {
+            text-align: start;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            color: $pColor;
+            margin-left: 0;
+            margin-top: 31px;
+            width: 445px;
+            margin-bottom: 0px;
+            opacity: 0.8;
+          }
+          @media only screen and(min-width:1024px) {
             margin-top: 0px;
             width: 445px;
             height: 84px;
           }
         }
-        form {
+        .images {
+          display: flex;
+          justify-content: space-between;
+          margin: 33px 30px 38px 30px;
+          width: 315px;
+          opacity: 0.5;
+          @media only screen and(min-width:768px) {
+            max-width: 536px;
+            margin-left: 0;
+            margin-top: 160px;
+            opacity: 0.5;
+          }
+
+          .spotify {
+            width: 56px;
+            height: 17px;
+            @media only screen and(min-width:768px) {
+              width: 96px;
+              height: 29px;
+              margin-right: 40px;
+            }
+          }
+          .apple {
+            width: 45px;
+            height: 17px;
+            @media only screen and(min-width:768px) {
+              width: 78px;
+              height: 29px;
+              margin-right: 41px;
+            }
+          }
+          .google {
+            width: 73px;
+            height: 11px;
+            @media only screen and(min-width:768px) {
+              width: 125px;
+              height: 18px;
+              margin-right: 27px;
+            }
+          }
+          .pocket {
+            width: 77px;
+            height: 15px;
+            @media only screen and(min-width:768px) {
+              width: 129px;
+              height: 26px;
+            }
+          }
+        }
+      }
+      form {
+        @media only screen and(min-width:768px) {
+          margin-left: -23px;
+          position: absolute;
+          top: 618px;
+        }
+        @media only screen and(min-width:1024px) {
           margin-top: -260px;
+        }
+        #error {
+          font-style: normal;
+          font-size: 12px;
+          line-height: 14px;
+          margin-left: 107px;
+          color: #fb3e3e;
+          font-weight: 700;
+          margin-top: -8px;
+          @media only screen and(min-width:768px) {
+            font-style: normal;
+            font-size: 12px;
+            line-height: 14px;
+            margin-left: 56px;
+            color: #fb3e3e;
+            font-weight: 700;
+            margin-top: -8px;
+          }
+        }
+        input {
+          background: #2c344b;
+          border-radius: 28px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 28px;
+          color: #ffffff;
+          mix-blend-mode: normal;
+          border: none;
+          height: 46px;
+          width: 327px;
+          margin: 0px 24px 16px 24px;
+        }
+        input[type='text']::placeholder {
+          color: $placeholderColor;
+          opacity: 0.8;
+        }
+        input[type='text'] {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 28px;
+          color: $white;
+          mix-blend-mode: normal;
+          padding-left: 32px;
+          @media only screen and(min-width:768px) {
+            height: 56px;
+            width: 427px;
+            font-weight: bold;
+            opacity: 0.8;
+          }
+        }
+        input[type='submit'] {
+          background-color: $inputSubmitColor;
+          cursor: pointer;
+          color: #121725;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 28px;
+          @media only screen and(min-width:768px) {
+            position: absolute;
+            height: 48px;
+            width: 162px;
+            top: 5px;
+            left: 260px;
+            font-weight: bold;
+          }
+        }
+        input[type='submit']:hover {
+          background-color: $hover;
         }
       }
     }
