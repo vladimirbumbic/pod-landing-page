@@ -242,6 +242,7 @@ body {
                     height: 46px;
                     width: 327px;
                     margin: 0px 24px 16px 24px;
+                    outline: none;
                 }
                 input[type='text']::placeholder {
                     color: $placeholderColor;
